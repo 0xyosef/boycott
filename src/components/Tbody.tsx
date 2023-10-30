@@ -9,16 +9,14 @@ import TableSources from "./TableSources";
 export default function Tbody(props: BoycottItem) {
   return (
     <>
-      <tbody role="rowgroup" className="divide-y text-text border border-primary">
-        <tr role="row" className="bg-background-light">
-          <TableType types={props.type} />
-          <TableCompany {...props.company} />
-          <TableProducts products={props.products} />
-          <TableAlternatives alternatives={props.alternatives} />
-          <TableOrigin origin={props.origin} />
-          <TableSources sources={props.sources} />
-        </tr>
-      </tbody>
+      <tr role="row" className="bg-background-light even:bg-background-light/75 flex flex-col py-4 px-2">
+        <TableType types={props.type} />
+        <TableCompany {...props.company} />
+        <TableProducts products={props.products} />
+        <TableAlternatives alternatives={props.alternatives} />
+        <TableOrigin origin={props.origin} />
+        <TableSources sources={props.sources} />
+      </tr>
     </>
   );
 }

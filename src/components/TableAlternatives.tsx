@@ -12,7 +12,7 @@ export default function TableAlternatives({
   }[];
 }) {
   return (
-    <TCell>
+    <TCell name="alternatives">
       {alternatives.flatMap((alternative) => alternative.name).join(", ")}
     </TCell>
   );

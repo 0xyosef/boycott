@@ -15,6 +15,6 @@ export function TableProducts({
   }[];
 }) {
   return (
-    <TCell>{products.flatMap((product) => product.name).join(", ")}</TCell>
+    <TCell name="products">{products.flatMap((product) => product.name).join(", ")}</TCell>
   );
 }

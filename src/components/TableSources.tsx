@@ -3,7 +3,7 @@ import TCell from "./TCell";
 
 export default function TableSources({sources}: { sources: string[] }) {
   return (
-    <TCell>
+    <TCell name="sources">
       {sources.map((source, id) => (
         <a
           key={id}
