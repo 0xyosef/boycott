@@ -8,17 +8,15 @@ type Props = {
 export default function Table({ data }: Props) {
   return (
     <>
-      <div className="overflow-x-auto">
-        <table className="text-left border border-primary bg-background text-text">
-          <Thead headers={Object.keys(data[0])}/>
-          {data.map((data, id) => (
-            <Tbody
-              key={id}
-              {...data}
-            />
-          ))}
-        </table>
-      </div>
+      <table role="table" className="text-left border border-primary bg-background text-text max-w-full">
+        <Thead headers={Object.keys(data[0])}/>
+        {data.map((data, id) => (
+          <Tbody
+            key={id}
+            {...data}
+          />
+        ))}
+      </table>
     </>
   );
 }

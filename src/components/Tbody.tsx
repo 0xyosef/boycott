@@ -9,8 +9,8 @@ import TableSources from "./TableSources";
 export default function Tbody(props: BoycottItem) {
   return (
     <>
-      <tbody className="divide-y text-text border border-primary">
-        <tr className="bg-background-light">
+      <tbody role="rowgroup" className="divide-y text-text border border-primary">
+        <tr role="row" className="bg-background-light">
           <TableType types={props.type} />
           <TableCompany {...props.company} />
           <TableProducts products={props.products} />

@@ -8,7 +8,7 @@ export default function Home() {
       <div>
         <Hero />
       </div>
-      <main className="pt-24 w-full flex">
+      <main className="pt-24 w-fit flex">
         <Table data={data} />
       </main>
     </div>
