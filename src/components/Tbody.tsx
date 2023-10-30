@@ -1,43 +1,45 @@
 import Image from "next/image";
-import {TbHandStop} from "react-icons/tb";
-import Link from "next/link";
-import {GrShare} from "react-icons/gr";
-import {RiShareBoxFill} from "react-icons/ri";
+import { RiShareBoxFill } from "react-icons/ri";
+import BoycottItem from "@/types/boycott";
 
-type Props={
-    src:string,
-    name:string,
-    status:string,
-    alternatives:string;
-    updateTame:string,
-    sourceUrl:string;
-}
-export default function Tbody({src,name,status,alternatives,updateTame,sourceUrl}:Props){
-    return(
-        <>
-            <tbody className="divide-y text-text border border-primary ">
-            <tr className="bg-background-light ">
-                <td className=" py-2 font-medium ">
-                   <span className="flex  items-center  ">
-                         <Image className="mx-2 " src={src} alt={"cola"} width={50} height={40} />
-                   <span>
-                      {name}
-                   </span>
-               </span>
-                </td>
-                <td className=" px-4 py-2  flex items-center">
-                    <TbHandStop className="bg-denied rounded-full p-1 mr-2" size={24}/> Denied
-                </td>
-                <td className="whitespace-nowrap px-4 py-2 ">
-                    {alternatives}
-                </td>
-                <td className="whitespace-nowrap px-4 py-2 ">{updateTame}</td>
-                <td className="whitespace-nowrap px-4 py-2 ">
-                    <a href={sourceUrl}><RiShareBoxFill className={"text-text"}/></a>
-                </td>
-            </tr>
-            </tbody>
-        </>
-
-    )
+export default function Tbody(props: BoycottItem) {
+  return (
+    <>
+      <tbody className="divide-y text-text border border-primary">
+        <tr className="bg-background-light">
+          <td className="whitespace-nowrap px-4 py-2">
+            {props.type.join(", ")}
+          </td>
+          <td className="py-2 font-medium">
+            <span className="flex items-center">
+              <Image
+                className="mx-2"
+                src={props.company.image}
+                alt={props.company.imageAlt}
+                width={50}
+                height={40}
+              />
+              <span>{props.company.name}</span>
+            </span>
+          </td>
+          <td className="px-4 py-2 flex items-center">
+            {props.products.flatMap((product) => product.name).join(", ")}
+          </td>
+          <td className="whitespace-nowrap px-4 py-2">
+            {props.alternatives
+              .flatMap((alternative) => alternative.name)
+              .join(", ")}
+          </td>
+          <td className="whitespace-nowrap px-4 py-2">{props.origin}</td>
+          <td className="whitespace-nowrap px-4 py-2">
+            {props.sources.map((source, id) => (
+              <a key={id} href={source} target="_blank" className="flex items-center justify-center gap-x-2">
+                <RiShareBoxFill className="text-text" />{id + 1}
+              </a>
+            ))}
+          </td>
+        </tr>
+      </tbody>
+    </>
+  );
 }

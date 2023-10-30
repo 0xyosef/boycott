@@ -1,19 +1,16 @@
-import NavBar from "@/components/NavBar";
-import Hero from "@/app/Components/Hero";
+import Hero from "@/app/_components/Hero";
 import Table from "@/components/Table";
-import {data} from "@/JSON/data";
+import data from "../../boycott.json";
 
 export default function Home() {
   return (
-   <div className="flex flex-col items-center justify-center mx-6 my-16 ">
-       <div>
-           <Hero />
-       </div>
-       <div className="mt-24 w-full flex ">
-           <div className="w-full">
-               <Table data={data}  />
-           </div>
-       </div>
-   </div>
-  )
+    <div className="flex flex-col items-center justify-center px-6 py-16">
+      <div>
+        <Hero />
+      </div>
+      <main className="pt-24 w-full flex">
+        <Table data={data} />
+      </main>
+    </div>
+  );
 }
