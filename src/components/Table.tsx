@@ -39,7 +39,7 @@ export default function Table({data}:Props){
                     </thead>
                     {data.map((data,id)=>(
                         <>
-                            <Tbody src={data.src} name={data.name} status={data.status} alternatives={data.alternatives} updateTame={data.updateTame} sourceUrl={data.sourceUrl} />
+                            <Tbody key={id} src={data.src} name={data.name} status={data.status} alternatives={data.alternatives} updateTame={data.updateTame} sourceUrl={data.sourceUrl} />
                         </>
                     ))}
                 </table>
