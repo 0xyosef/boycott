@@ -2,7 +2,7 @@ import TCell from "./TCell";
 
 export default function TableType({ types }: { types: string[] }) {
   return (
-    <TCell>
+    <TCell name="type">
       <div className="gap-2 flex items-center justify-center flex-wrap">
         {types.map((type, id) => (
           <Type key={id} type={type} />

@@ -43,50 +43,5 @@
       "https://en.wikipedia.org/wiki/The_Coca-Cola_Company",
       "https://en.wikipedia.org/wiki/Coca-Cola"
     ]
-  },
-  {
-    "type": ["drinks", "cola"],
-    "company": {
-      "name": "The Coca-Cola Company",
-      "image": "/cola.jpg",
-      "imageAlt": "CocaCola Logo"
-    },
-    "products": [
-      {
-        "name": "CocaCola",
-        "image": "/cola.jpg",
-        "imageAlt": "CocaCola",
-        "alternatives": [
-          {
-            "name": "Spiro Spathis Cola",
-            "image": "/spiro-spathis.jpg",
-            "imageAlt": "Spiro Spathis Cola"
-          }
-        ]
-      },
-      {
-        "name": "CocaCola Zero",
-        "image": "/cola-zero.jpg",
-        "imageAlt": "CocaCola Zero",
-        "alternatives": []
-      }
-    ],
-    "alternatives": [
-      {
-        "name": "Spiro Spathis",
-        "origin": "Egypt",
-        "image": "/spiro-spathis.jpg",
-        "imageAlt": "Spiro Spathis Logo",
-        "sources": [
-          "https://yellowpages.com.eg/en/profile/Mymco-For-Food-&-Beverages-_-Spiro-Spathis/670434",
-          "https://arz.wikipedia.org/wiki/%D8%B3%D8%A8%D9%8A%D8%B1%D9%88_%D8%B3%D8%A8%D8%A7%D8%AA%D8%B3"
-        ]
-      }
-    ],
-    "origin": "USA",
-    "sources": [
-      "https://en.wikipedia.org/wiki/The_Coca-Cola_Company",
-      "https://en.wikipedia.org/wiki/Coca-Cola"
-    ]
   }
 ]
