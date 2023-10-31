@@ -1,9 +1,6 @@
 import type { Metadata } from 'next'
-import { Cairo } from 'next/font/google'
 import './globals.css'
 import NavBar from "@/components/NavBar";
-
-
 
 export const metadata: Metadata = {
   title: 'Create Next App',
