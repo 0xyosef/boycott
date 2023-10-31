@@ -12,7 +12,7 @@ export default function TableCompany({
 }) {
   return (
     <TCell>
-      <div className="flex items-center gap-x-4">
+      <div className="flex items-center gap-x-4 ">
         <Image src={image} alt={imageAlt} width={50} height={40} />
         <span className="font-medium">{name}</span>
       </div>
