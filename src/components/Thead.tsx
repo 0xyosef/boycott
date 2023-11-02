@@ -6,7 +6,7 @@ export default function Thead({ headers }: { headers: string[] }) {
           <th
             role="columnheader"
             key={id}
-            className="py-2 px-2 capitalize font-medium border border-primary"
+            className="py-2 px-2 capitalize font-medium dark:border dark:border-primary border "
           >
             {header}
           </th>

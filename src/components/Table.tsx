@@ -13,12 +13,12 @@ export default function Table({ data }: Props) {
     return (
         <table
             role="table"
-            className="text-left border border-primary bg-background text-text max-w-full w-full"
+            className="text-left dark:border dark:border-primary dark:bg-background dark:text-text bg-white max-w-full w-full"
         >
             <Thead headers={Object.keys(data[0])} />
             <tbody
                 role="rowgroup"
-                className="divide-y text-text border border-primary"
+                className="divide-y dark:text-text  dark:border dark:border-primary"
             >
             {data.filter((data)=>{
                 return name === '' ? data : data.company.name.toLowerCase().includes(name)

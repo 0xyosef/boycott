@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode:"class",
   theme: {
     extend: {
       colors: {
@@ -16,7 +17,6 @@ const config: Config = {
         secondary: "#C1C2C5",
         accent: "#F08C00",
         "accent-light": "#FFD43B",
-        denied: "#E03131",
       },
     },
   },

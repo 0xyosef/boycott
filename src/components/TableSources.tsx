@@ -11,7 +11,7 @@ export default function TableSources({sources}: { sources: string[] }) {
           target="_blank"
           className="flex items-center justify-center gap-x-2"
         >
-          <RiShareBoxFill className="text-text" />
+          <RiShareBoxFill className="dark:text-text text-background" />
           {id + 1}
         </a>
       ))}
