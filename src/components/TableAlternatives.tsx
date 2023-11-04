@@ -13,7 +13,9 @@ export default function TableAlternatives({
 }) {
   return (
     <TCell name="alternatives">
-      {alternatives.flatMap((alternative) => alternative.name).join(", ")}
+      <div className="w-fit">
+        {alternatives.flatMap((alternative) => alternative.name).join(", ")}
+      </div>
     </TCell>
   );
 }

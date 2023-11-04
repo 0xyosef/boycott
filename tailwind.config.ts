@@ -18,6 +18,9 @@ const config: Config = {
         accent: "#F08C00",
         "accent-light": "#FFD43B",
       },
+      screens: {
+        xs: "480px"
+      }
     },
   },
   plugins: [require("@tailwindcss/container-queries")],

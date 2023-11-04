@@ -1,17 +1,21 @@
+import TRow from "./TRow";
+
 export default function Thead({ headers }: { headers: string[] }) {
   return (
-    <thead role="rowgroup" className="hidden @2xl:table-header-group">
-      <tr role="row">
+    <thead role="rowgroup" className="hidden @xl/main:block">
+      <TRow>
         {headers.map((header, id) => (
           <th
             role="columnheader"
             key={id}
-            className="py-2 px-2 capitalize font-medium dark:border dark:border-primary border "
+            scope="col"
+            className="capitalize font-medium dark:border dark:border-primary border p-2"
+            id={header}
           >
             {header}
           </th>
         ))}
-      </tr>
+      </TRow>
     </thead>
   );
 }

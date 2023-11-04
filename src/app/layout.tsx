@@ -1,8 +1,8 @@
-"use client"
-import type { Metadata } from 'next'
-import './globals.css'
+"use client";
+// import type { Metadata } from 'next'
+import "./globals.css";
 import NavBar from "@/components/NavBar";
-import {ThemeProvider} from "next-themes";
+import { ThemeProvider } from "next-themes";
 
 // export const metadata: Metadata = {
 //   title: 'Create Next App',
@@ -12,16 +12,18 @@ import {ThemeProvider} from "next-themes";
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={`dark:bg-background text-text`}>
-      <ThemeProvider attribute={"class"}>
-          <NavBar />
-          {children}
-      </ThemeProvider>
+      <body className="dark:bg-background text-background dark:text-text">
+        <ThemeProvider attribute={"class"}>
+          <header>
+            <NavBar />
+          </header>
+          <main className="@container/main xs:px-4">{children}</main>
+        </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

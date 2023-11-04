@@ -9,10 +9,10 @@ export default function TableSources({sources}: { sources: string[] }) {
           key={id}
           href={source}
           target="_blank"
-          className="flex items-center justify-center gap-x-2"
+          className="flex items-center justify-center gap-x-2 w-fit"
         >
-          <RiShareBoxFill className="dark:text-text text-background" />
           {id + 1}
+          <RiShareBoxFill className="dark:text-text text-background" />
         </a>
       ))}
     </TCell>

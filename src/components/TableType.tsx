@@ -3,7 +3,7 @@ import TCell from "./TCell";
 export default function TableType({ types }: { types: string[] }) {
   return (
     <TCell name="type">
-      <div className="gap-2 flex items-center justify-center flex-wrap">
+      <div className="gap-2 flex items-center justify-center flex-wrap @[4rem]/cell:justify-start">
         {types.map((type, id) => (
           <Type key={id} type={type} />
         ))}
