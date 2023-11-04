@@ -1,6 +1,6 @@
 export default function Thead({ headers }: { headers: string[] }) {
   return (
-    <thead role="rowgroup" className="hidden @[650px]:table-header-group">
+    <thead role="rowgroup" className="hidden @2xl:table-header-group">
       <tr role="row">
         {headers.map((header, id) => (
           <th

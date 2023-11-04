@@ -9,7 +9,7 @@ import TableSources from "./TableSources";
 export default function Tbody(props: BoycottItem) {
   return (
     <>
-      <tr role="row" className="dark:bg-background-light dark:even:bg-background-light/75 bg-slate-100 even:bg-slate-300 flex flex-col py-4 px-2">
+      <tr role="row" className="dark:bg-background-light dark:even:bg-background-light/75 bg-slate-100 even:bg-slate-300 flex flex-col py-4 px-2 @2xl:table-row">
         <TableType types={props.type} />
         <TableCompany {...props.company} />
         <TableProducts products={props.products} />
