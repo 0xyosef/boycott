@@ -12,11 +12,8 @@ export default function TableCompany({
 }) {
   return (
     <TCell name="company">
-      <div className="w-full flex justify-between">
+      <div className="w-full flex justify-between" aria-label={name}>
         <Image src={image} alt={imageAlt} width={50} height={40} />
-        <span className="font-medium w-fit hidden @[5rem]:inline-block">
-          {name}
-        </span>
       </div>
     </TCell>
   );

@@ -3,8 +3,7 @@ export default function TRow({ children }: { children: React.ReactNode }) {
     <tr
       role="row"
       className="grid grid-cols-1 \
-      @xl:grid-cols-[minmax(0,2fr)_minmax(0,20rem)_minmax(0,2fr)_minmax(0,2fr)_minmax(0,1fr)_minmax(0,2fr)] \
-      @3xl:grid-cols-[minmax(0,2fr)_minmax(0,20rem)_minmax(0,3fr)_minmax(0,3fr)_minmax(0,1fr)_minmax(0,2fr)] \
+      @xl:grid-cols-[minmax(max-content,1fr)_minmax(max-content,1fr)_minmax(max-content,2fr)_minmax(max-content,2fr)_minmax(max-content,1fr)] \
       " 
     >
       {children}

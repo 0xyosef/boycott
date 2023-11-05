@@ -16,7 +16,7 @@ export default function Tbody(props: BoycottItem) {
         <TableProducts products={props.products} />
         <TableAlternatives alternatives={props.alternatives} />
         <TableOrigin origin={props.origin} />
-        <TableSources sources={props.sources} />
+        {/* <TableSources sources={props.sources} /> */}
       </TRow>
     </div>
   );
