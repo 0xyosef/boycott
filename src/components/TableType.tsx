@@ -1,10 +1,11 @@
+import clsx from "clsx";
 import TCell from "./TCell";
 
 export default function TableType({ types }: { types: string[] }) {
   return (
     <TCell name="type">
       <div className="gap-2 flex items-center justify-center flex-wrap @[4rem]/cell:justify-start">
-        {types.map((type, id) => (
+        {types.sort().map((type, id) => (
           <Type key={id} type={type} />
         ))}
       </div>
@@ -14,7 +15,12 @@ export default function TableType({ types }: { types: string[] }) {
 
 function Type({ type }: { type: string }) {
   return (
-    <button className="px-2 py-1 w-fit capitalize even:bg-accent-light odd:bg-accent rounded-lg text-background">
+    <button
+      className={clsx(
+        "px-2 py-1 w-fit capitalize rounded-lg text-background",
+        type,
+      )}
+    >
       {type}
     </button>
   );
