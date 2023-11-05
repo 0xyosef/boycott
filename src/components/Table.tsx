@@ -28,9 +28,27 @@ const getHeaders = (items: BoycottItem[]) => {
   return headers;
 };
 
+const getData = (items: BoycottItem[]) => {
+  // extract all products from items
+  return items.flatMap((item) =>
+    item.products.map((product) => ({
+      type: item.type,
+      company: item.company,
+      product: {
+        name: product.name,
+        image: product.image,
+        imageAlt: product.imageAlt,
+      },
+      alternatives: product.alternatives,
+      origin: item.origin,
+    })),
+  );
+};
+
 export default function Table({ data }: Props) {
   const [name, _] = useFilter();
   const headers = getHeaders(data);
+  const items = getData(data);
 
   return (
     <table
@@ -42,11 +60,11 @@ export default function Table({ data }: Props) {
         role="rowgroup"
         className="divide-y dark:border dark:border-primary"
       >
-        {data
-          .filter((data) => {
+        {items
+          .filter((item) => {
             return name === ""
-              ? data
-              : data.company.name.toLowerCase().includes(name);
+              ? item
+              : item.company.name.toLowerCase().includes(name);
           })
           .map((data, id) => (
             <Tbody key={id} {...data} />

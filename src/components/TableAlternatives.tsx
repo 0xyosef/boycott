@@ -5,10 +5,8 @@ export default function TableAlternatives({
 }: {
   alternatives: {
     name: string;
-    origin: string;
     image: string;
     imageAlt: string;
-    sources: string[];
   }[];
 }) {
   return (

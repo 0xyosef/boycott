@@ -10,7 +10,6 @@ export default function Thead({ headers }: { headers: string[] }) {
             key={id}
             scope="col"
             className="capitalize font-medium dark:border dark:border-primary border p-2"
-            id={header}
           >
             {header}
           </th>
