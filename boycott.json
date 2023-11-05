@@ -6,6 +6,7 @@
       "image": "/cola.jpg",
       "imageAlt": "CocaCola Logo"
     },
+    "origin": "USA",
     "products": [
       {
         "name": "CocaCola",
@@ -38,7 +39,6 @@
         ]
       }
     ],
-    "origin": "USA",
     "sources": [
       "https://en.wikipedia.org/wiki/The_Coca-Cola_Company",
       "https://en.wikipedia.org/wiki/Coca-Cola"
@@ -51,6 +51,7 @@
       "image": "/cola.jpg",
       "imageAlt": "CocaCola Logo"
     },
+    "origin": "USA",
     "products": [
       {
         "name": "CocaCola",
@@ -60,7 +61,8 @@
           {
             "name": "Spiro Spathis Cola",
             "image": "/spiro-spathis.jpg",
-            "imageAlt": "Spiro Spathis Cola"
+            "imageAlt": "Spiro Spathis Cola",
+            "price": "7 EGP"
           }
         ]
       },
@@ -83,7 +85,6 @@
         ]
       }
     ],
-    "origin": "USA",
     "sources": [
       "https://en.wikipedia.org/wiki/The_Coca-Cola_Company",
       "https://en.wikipedia.org/wiki/Coca-Cola"

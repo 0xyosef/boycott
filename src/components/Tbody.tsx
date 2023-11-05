@@ -29,9 +29,9 @@ export default function Tbody(props: {
       <TRow>
         <TableType types={props.type} />
         <TableCompany {...props.company} />
+        <TableOrigin origin={props.origin} />
         <TableProduct {...props.product} />
         <TableAlternatives alternatives={props.alternatives} />
-        <TableOrigin origin={props.origin} />
       </TRow>
     </div>
   );
