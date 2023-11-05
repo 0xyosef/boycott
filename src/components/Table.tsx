@@ -14,7 +14,7 @@ const getHeaders = (items: BoycottItem[]) => {
       return [...acc, ...Object.keys(current)];
     }, [] as string[])
     .filter((value, index, self) => self.indexOf(value) == index)
-    .filter((value) => value !== "sources")
+    .filter((value) => !["sources", "origin"].includes(value))
     .map((header) => {
       switch (header) {
         case "products":
@@ -29,7 +29,6 @@ const getHeaders = (items: BoycottItem[]) => {
 };
 
 const getData = (items: BoycottItem[]) => {
-  // extract all products from items
   return items.flatMap((item) =>
     item.products.map((product) => ({
       type: item.type,
@@ -53,7 +52,7 @@ export default function Table({ data }: Props) {
   return (
     <table
       role="table"
-      className="text-left @container/table flex flex-col dark:border dark:border-primary  max-w-full w-full"
+      className="text-left @container/table flex flex-col dark:border dark:border-primary max-w-7xl w-full mx-auto"
     >
       <Thead headers={headers} />
       <tbody

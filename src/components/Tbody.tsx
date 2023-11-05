@@ -2,7 +2,6 @@ import TableType from "./TableType";
 import TableCompany from "./TableCompany";
 import { TableProduct } from "./TableProduct";
 import TableAlternatives from "./TableAlternatives";
-import TableOrigin from "./TableOrigin";
 import TRow from "./TRow";
 
 export default function Tbody(props: {
@@ -29,7 +28,6 @@ export default function Tbody(props: {
       <TRow>
         <TableType types={props.type} />
         <TableCompany {...props.company} />
-        <TableOrigin origin={props.origin} />
         <TableProduct {...props.product} />
         <TableAlternatives alternatives={props.alternatives} />
       </TRow>
