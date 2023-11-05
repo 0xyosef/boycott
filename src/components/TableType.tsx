@@ -17,7 +17,7 @@ function Type({ type }: { type: string }) {
   return (
     <button
       className={clsx(
-        "px-2 py-1 w-fit capitalize rounded-lg text-background",
+        "px-2 py-1 w-fit capitalize rounded-lg text-background bg-blue-400",
         type,
       )}
     >

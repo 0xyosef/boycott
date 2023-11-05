@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .cola {
-  @apply bg-accent;
+  @apply bg-accent !important;
 }
 
 .drinks {
-  @apply bg-accent-light;
+  @apply bg-accent-light !important;
 }
