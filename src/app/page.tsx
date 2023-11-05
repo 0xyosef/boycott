@@ -6,7 +6,7 @@ import { FilterProvider } from "@/contexts/FilterContext";
 export default function Home() {
   return (
     <FilterProvider name={""}>
-      <Hero />
+      <Hero  />
       <Table data={data} />
     </FilterProvider>
   );

@@ -13,7 +13,7 @@ export default function Table({ data }: Props) {
   return (
     <table
       role="table"
-      className="text-left @container/table flex flex-col dark:border dark:border-primary bg-white max-w-full w-full"
+      className="text-left @container/table flex flex-col dark:border dark:border-primary  max-w-full w-full"
     >
       <Thead headers={Object.keys(data[0])} />
       <tbody
