@@ -57,7 +57,7 @@ export default function Table({ data }: Props) {
       <Thead headers={headers} />
       <tbody
         role="rowgroup"
-        className="divide-y dark:border dark:border-primary"
+        className="divide-y dark:border dark:border-primary border-2"
       >
         {items
           .filter((item) => {

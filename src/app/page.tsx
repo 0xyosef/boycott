@@ -6,8 +6,11 @@ import { FilterProvider } from "@/contexts/FilterContext";
 export default function Home() {
   return (
     <FilterProvider name={""}>
-      <Hero  />
-      <Table data={data} />
+        <div className="flex flex-col gap-6 mx-4">
+            <Hero />
+            <Table data={data} />
+        </div>
+
     </FilterProvider>
   );
 }

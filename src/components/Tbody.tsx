@@ -24,7 +24,7 @@ export default function Tbody(props: {
   origin: string;
 }) {
   return (
-    <div className="dark:bg-background-light dark:even:bg-background-light/75 bg-slate-100 even:bg-slate-300">
+    <div className="dark:bg-background-light dark:even:bg-background-light/75  even:bg-slate-300">
       <TRow>
         <TableType types={props.type} />
         <TableCompany {...props.company} />

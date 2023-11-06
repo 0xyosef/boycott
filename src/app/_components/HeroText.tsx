@@ -7,9 +7,8 @@ export default function HeroText() {
         <span className="w-[22px] mr-[22px] -mt-4 h-full">
           <BiSolidQuoteLeft className="text-primary" size={30} />
         </span>
-        <span className="font-medium">
-          A comprehensive and crowd-sourced list of games using anti-cheats and
-          their compatibility with GNU/Linux or Wine/Proton.
+        <span className="font-normal">
+          A comprehensive and compiled list of county products with reliable local and quality alternatives
         </span>
       </div>
     </>
